@@ -9,10 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-consumer-dept-80</artifactId>
+    <artifactId>springcloud-consumer-dept-feign</artifactId>
 
     <!--实体类+web-->
     <dependencies>
+
+        <!--feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
 
         <!--Ribbon-->
         <dependency>
