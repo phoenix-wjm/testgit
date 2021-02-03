@@ -1,4 +1,5 @@
-package com.kuang.springcloud.service;/*
+package com.kuang.springcloud.service;
+/*
  * @projectName: springcloud
  * @documentName: DeptClientService
  * @author: WJM
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @GetMapping("/dept/get/{id}")
